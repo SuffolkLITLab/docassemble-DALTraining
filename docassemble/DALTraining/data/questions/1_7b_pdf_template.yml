@@ -1,0 +1,37 @@
+### Interview order ###
+mandatory: True
+code: |
+  full_name
+  affidavit_body
+  signature_date = today()
+  signature
+  assemble_affidavit
+---
+question: What is your name?
+fields:
+  - Full name: full_name
+---
+question: Affidavit of ${ full_name }
+fields:
+  - Under penalty of perjury I, ${ full_name }, do swear and affirm the following to be true: affidavit_body
+    input type: area
+---
+question: |
+  Sign your affidavit
+subquestion: |
+  By signing this affidavit and submitting it to the court you swear your statement is true, under penalty of perjury.
+signature: signature
+under: |
+  ${ full_name }
+---
+question: Your affidavit is ready
+attachment:
+  - name: Affidavit of ${ full_name }
+    pdf template file: affidavit_template.pdf
+    filename: Affidavit of ${ full_name }
+    variable name: assemble_affidavit
+    fields:
+      full_name: ${ full_name }
+      affidavit_body: ${ affidavit_body }
+      signature_date: ${ signature_date }
+      signature: ${ signature }

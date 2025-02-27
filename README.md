@@ -15,12 +15,13 @@ Before this session, attendees should:
 
 Outline:
 
-1.	Introduction to the Docassemble Playground (Hello, world!)
-2.	Common question types and variables
-3.	Controlling the order of questions 
-4.	Basic interview logic
-5.	Basic document assembly
-6.	Using Word and Acrobat templates
+1. Introduction to the Docassemble Playground
+2. Create your first question
+3. Working with common question types
+4. Specifying the order of questions
+5. Dynamic questions
+6. Basic document assembly
+7. Using Word and Acrobat templates
 
 ## Session 2: The Weaver and other Assembly Line tools
 

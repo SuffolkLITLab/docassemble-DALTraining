@@ -1,0 +1,51 @@
+# This builds on the previous interview and demonstrates modifying question text with Mako.
+#
+# Takeaways:
+# - How to use Mako's `if`/`else`/`endif` syntax change the text that is displayed
+# - 
+
+### Interview order ###
+mandatory: True
+code: |
+  full_name
+  incident_date
+  eyewitness
+  incident_description
+  show_statement
+---
+question: What is your name?
+fields:
+  - Full name: full_name
+---
+question: Did you see what happened?
+fields:
+  - no label: eyewitness
+    datatype: yesnoradio
+---
+# 1. Sometimes you might want to ask a question differently based on the answer to another question. Use use Mako's `if`/`else`/`endif` syntax!
+# 2. The `%` is a Mako tag, so you don't also need to use `${}` around variables
+# 3. Saying `if eyewitness` is equivalent to `if eyewitness == True`, but sometimes it's helpful to be explicit
+# 4. There is more than one way to do this, but this is probably the simplest
+question: |
+  % if eyewitness == True:
+  Describe what you saw
+  % else:
+  Describe what you heard
+  % endif
+fields:
+  - no label: incident_description
+    datatype: area
+---
+question: When did it happen?
+fields:
+  - Select the event date: incident_date
+    datatype: date
+---
+event: show_statement
+question: |
+  ## Statement of ${ full_name }
+  
+  - **Incident date:** ${ incident_date }
+  - **Eyewitness:** ${ eyewitness }
+
+  ${ incident_description }

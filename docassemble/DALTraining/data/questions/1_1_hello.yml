@@ -1,0 +1,7 @@
+# This is just a simple interview to dispel some of the fear of code and get an easy win.
+#
+# Takeaways:
+# - Force a question to display with `mandatory: True`
+# - This is going to be easy!
+mandatory: True
+question: Hello!
