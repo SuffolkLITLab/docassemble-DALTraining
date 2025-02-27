@@ -1,0 +1,50 @@
+# This builds on the previous interview to demonstrate how to specify the interview order with a mandatory code block.
+#
+# Takeaways:
+# - How to use a mandatory code block to specify the interview order
+# - How to refer to a question with the `event` modifier
+# - The difference between using variables in text (Mako tags required) and in a code block
+
+# Interview order code block
+# 1. Move the end-screen question block back to the end of the interview
+# 2. Create this mandatory code block and add each variable from the questions below
+# 3. Explain that we don't need to use Mako tags in a code block
+# 4. Demonstrate that the interview order changes when the order changes in this block
+### Interview order ###
+mandatory: True
+code: |
+  full_name
+  incident_date
+  eyewitness
+  incident_description
+  show_statement
+---
+question: What is your name?
+fields:
+  - Full name: full_name
+---
+question: Did you see what happened?
+fields:
+  - no label: eyewitness
+    datatype: yesnoradio
+---
+question: About the event
+fields:
+  - Describe what happened: incident_description
+    datatype: area
+---
+question: When did it happen?
+fields:
+  - Select the event date: incident_date
+    datatype: date
+---
+# 1. Move this question block back to the end of the interview
+# 2. Add the `event: show_statement` modifier, which gives us a way to add this question to the interview order code block
+event: show_statement
+question: |
+  ## Statement of ${ full_name }
+  
+  - **Incident date:** ${ incident_date }
+  - **Eyewitness:** ${ eyewitness }
+
+  ${ incident_description }

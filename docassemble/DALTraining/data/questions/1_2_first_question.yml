@@ -1,0 +1,26 @@
+# This interview introduces fields and variables, displaying a variable in text with Mako syntax, and how a question that depends on a variable will call the question that sets that variable.
+#
+# Takeaways:
+# - How to create a short text field, which is the default data type in Docassemble
+# - Basic question punctuation/formatting
+# - Variables are used to store the user's input
+# - Variables are easier to use if the names make sense!
+# - The LIT Lab has helpful naming conventions
+# - How to use Mako syntax to insert the value of a variable into display text
+# - Using `#` at the beginning of a line tells Docassemble to ignore it
+
+# Short text fields
+# 1. Start by typing out the following, but with `variable1` as the variable name
+# 2. Change the variable name to `full_name` because readable variable names are easier to work with! (Mention naming conventions.)
+# 3. Note that clicking **Continue** results in an error, which we can fix by giving the interview an end screen.
+# mandatory: True
+question: What is your name?
+fields:
+  - Full name: full_name
+---
+# Displaying user input
+# 1. Explain that Mako syntax is for inserting code into text
+# 2. Show that we can comment out `mandatory: True` from the question above because this question depends on the answer to that one
+# 3. Note the best practice that there should be only one mandatory question, and it should be at the beginning of the interview
+mandatory: True
+question: Hi, ${ full_name }!
