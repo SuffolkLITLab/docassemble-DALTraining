@@ -1,3 +1,9 @@
+# This interview demonstrates document assembly using a simple PDF template.
+
+# Takeaways:
+# - With a PDF template, the variables are described in the attachment block, with the PDF label on the left and the variable on the right
+# - PDF templates are less flexible, but may be preferable if you want to constrain input
+
 ### Interview order ###
 mandatory: True
 code: |

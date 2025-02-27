@@ -1,3 +1,9 @@
+# This interview demonstrates document assembly using a simple Word (DOCX) template.
+
+# Takeaways:
+# - With a Word template, the variables are described in the document
+# - Word templates are quite flexible, since fields can expand as needed
+
 ### Interview order ###
 mandatory: True
 code: |

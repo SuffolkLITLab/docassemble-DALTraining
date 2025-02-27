@@ -1,3 +1,7 @@
+# This interview demonstrates that HTML can be used to format documents without using a template.
+#
+# This is just meant as a quick demonstration, to show what is possible. This is not meant for students to follow along.
+
 ### Interview order ###
 mandatory: True
 code: |
