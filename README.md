@@ -31,7 +31,7 @@ Outline:
    5. Dynamic questions
 5. Teaser: basic document assembly
 
-## Session 2: 
+## Session 2: Document assembly
 
 This session builds on the first session.
 
