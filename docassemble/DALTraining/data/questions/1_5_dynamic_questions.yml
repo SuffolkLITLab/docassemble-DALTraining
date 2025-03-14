@@ -1,8 +1,7 @@
 # This builds on the previous interview and demonstrates modifying question text with Mako.
 #
 # Takeaways:
-# - How to use Mako's `if`/`else`/`endif` syntax change the text that is displayed
-# - 
+# - How to use Mako's `if`/`else`/`endif` syntax change text displayed in a question
 
 ### Interview order ###
 mandatory: True

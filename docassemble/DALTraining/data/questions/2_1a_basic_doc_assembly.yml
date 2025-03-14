@@ -1,12 +1,23 @@
-# This interview demonstrates how to assemble a document.
+# This interview demonstrates how to assemble a document using Docassemble's native document assembly features.
+#
+# Start by converting the "statement" interview from last session into an interview for an affidavit.
+# 1. Remove `eyewitness` from the interview order and remove the question
+# 2. Convert the `incident_date` question into the `signature_date` code block
+# 3. Add a `signature` question
+# 4. Convert the `show_statement` question block into an `assemble_affidavit` attachment block
+# 5. Demonstrate that including `signature_date` in the interview order is unnecessary because it is referenced in the attachment block, but it doesn't hurt and we might want to keep it there for clarity
+# 
+# Takeaways:
+# - How to assign a value to a variable in a code block
+# - How to use the `attachment` question type to assemble a basic document
 
 ### Interview order ###
 mandatory: True
 code: |
   full_name
   affidavit_body
-  signature_date = today()
   signature
+  signature_date
   assemble_affidavit
 ---
 question: What is your name?
@@ -25,6 +36,9 @@ subquestion: |
 signature: signature
 under: |
   ${ full_name }
+---
+code: |
+  signature_date = today()
 ---
 question: Your affidavit is ready
 attachment:

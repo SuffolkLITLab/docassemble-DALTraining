@@ -1,14 +1,14 @@
 # This interview demonstrates that HTML can be used to format documents without using a template.
 #
-# This is just meant as a quick demonstration, to show what is possible. This is not meant for students to follow along.
+# This is just meant as a quick demonstration to show what is possible. This is not meant for students to follow along.
 
 ### Interview order ###
 mandatory: True
 code: |
   full_name
   affidavit_body
-  signature_date = today()
   signature
+  signature_date
   assemble_affidavit
 ---
 question: What is your name?
@@ -27,6 +27,9 @@ subquestion: |
 signature: signature
 under: |
   ${ full_name }
+---
+code: |
+  signature_date = today()
 ---
 question: Your affidavit is ready
 attachment:

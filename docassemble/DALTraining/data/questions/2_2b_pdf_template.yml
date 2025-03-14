@@ -1,16 +1,16 @@
-# This interview demonstrates document assembly using a simple Word (DOCX) template.
+# This interview demonstrates document assembly using a simple PDF template.
 
 # Takeaways:
-# - With a Word template, the variables are described in the document
-# - Word templates are quite flexible, since fields can expand as needed
+# - With a PDF template, the variables are described in the attachment block, with the PDF label on the left and the variable on the right
+# - PDF templates are less flexible, but may be preferable if you want to constrain input
 
 ### Interview order ###
 mandatory: True
 code: |
   full_name
   affidavit_body
-  signature_date = today()
   signature
+  signature_date
   assemble_affidavit
 ---
 question: What is your name?
@@ -30,9 +30,17 @@ signature: signature
 under: |
   ${ full_name }
 ---
+code: |
+  signature_date = today()
+---
 question: Your affidavit is ready
 attachment:
   - name: Affidavit of ${ full_name }
-    docx template file: affidavit_template.docx
+    pdf template file: affidavit_template.pdf
     filename: Affidavit of ${ full_name }
     variable name: assemble_affidavit
+    fields:
+      full_name: ${ full_name }
+      affidavit_body: ${ affidavit_body }
+      signature_date: ${ signature_date }
+      signature: ${ signature }
