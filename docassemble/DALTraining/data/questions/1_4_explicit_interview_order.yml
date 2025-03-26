@@ -10,6 +10,7 @@
 # 2. Create this mandatory code block and add each variable from the questions below
 # 3. Explain that we don't need to use Mako tags in a code block
 # 4. Demonstrate that the interview order changes when the order changes in this block
+
 ### Interview order ###
 mandatory: True
 code: |

@@ -7,7 +7,7 @@
 # - Variables are easier to use if the names make sense!
 # - The LIT Lab has helpful naming conventions
 # - How to use Mako syntax to insert the value of a variable into display text
-# - Using `#` at the beginning of a line tells Docassemble to ignore it
+# - Using a `#` at the start of a line tells Docassemble to ignore it
 
 # Short text fields
 # 1. Start by typing out the following, but with `variable1` as the variable name
