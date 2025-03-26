@@ -52,6 +52,21 @@ Outline:
 
 This session is an introduction to the Document Assembly Line tools, especially the Weaver. At the end of this session you will be able to use the Weaver to generate a draft Docassemble interview from an existing court form.
 
+The documentation website has detailed information about [working with PDF files](https://assemblyline.suffolklitlab.org/docs/authoring/pdfs) and [working with Word/DOCX files](https://assemblyline.suffolklitlab.org/docs/authoring/docx), and why you might choose one over the other. For this session we will use both.
+
+The documentation website also includes a helpful [guide to the Weaver-generated YAML](https://assemblyline.suffolklitlab.org/docs/authoring/generated_yaml).
+
+*Note: this session does not have example YAML files because we will be using the Weaver to generate them from PDF and DOCX templates.*
+
+Outline:
+
+1. Prepare `../templates/affidavit_template.pdf` using Adobe Acrobat or the [free Gavel PDF tool](https://start.gavel.io/pdf)
+2. Run the PDF through the Weaver
+3. Tour the Weaver-generated YAML
+4. Prepare `../templates/affidavit_template.docx`
+5. Run the DOCX through the Weaver
+6. Discuss the differences between DOCX and PDF templates
+
 ## Session 4: Troubleshooting
 
 In this session we will go over common coding issues and how to solve them, plus general troubleshooting tips and a hands-on problem-solving session.
