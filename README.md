@@ -60,12 +60,22 @@ The documentation website also includes a helpful [guide to the Weaver-generated
 
 Outline:
 
-1. Prepare `../templates/affidavit_template.pdf` using Adobe Acrobat or the [free Gavel PDF tool](https://start.gavel.io/pdf)
+1. Prepare `../templates/affidavit_template.pdf` using Adobe Acrobat or the [free Gavel PDF tool](https://start.gavel.io/pdf) by changing variable names to match [AssemblyLine field labels](https://assemblyline.suffolklitlab.org/docs/authoring/label_variables)
+   * Change `full_name` to `users1_full_name` and subsequent occurrences to `users_full_name__1`, `users_full_name__2`, and so on
+   * Change `signature` to `users1_signature`
+   * No need to change `signature_date`, but explain why
 2. Run the PDF through the Weaver
-3. Tour the Weaver-generated YAML
-4. Prepare `../templates/affidavit_template.docx`
-5. Run the DOCX through the Weaver
-6. Discuss the differences between DOCX and PDF templates
+3. Locate familiar blocks in the Weaver-generated YAML:
+   * Interview order
+   * Questions (note questions that are "missing" because they are pulled in from the question library)
+   * Attachment
+   (Don't ignore the rest, but note that they'll be able to learn about other blocks when they need to.)
+4. Run the interview and note any differences
+5. Prepare `../templates/affidavit_template.docx` by changing variables names to match AssemblyLine field labels
+   * Change `full_name` to `users[1].full_name`
+   * Change `signature` to `users[1].signature`
+6. Run the DOCX through the Weaver, then run the interview and note any differences
+7. Discuss the differences between DOCX and PDF templates
 
 ## Session 4: Troubleshooting
 
