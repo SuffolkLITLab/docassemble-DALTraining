@@ -33,7 +33,7 @@ question: |
   % endif
 fields:
   - no label: incident_description
-    datatype: area
+    input type: area
 ---
 question: When did it happen?
 fields:

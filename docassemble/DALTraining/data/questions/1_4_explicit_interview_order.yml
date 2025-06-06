@@ -32,7 +32,7 @@ fields:
 question: About the event
 fields:
   - Describe what happened: incident_description
-    datatype: area
+    input type: area
 ---
 question: When did it happen?
 fields:
