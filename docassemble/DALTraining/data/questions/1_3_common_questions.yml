@@ -3,7 +3,7 @@
 # When teaching this interview, build the interview slowly, adding one question at a time and updating the end screen. Try to elicit answers rather than simply giving them. Save and run the interview to show each change.
 #
 # Takeaways:
-# - How to use the `datatype` question modifier for common question types: `yesnoradio`, `date`, `area`
+# - How to use the `datatype` and `input type` question modifiers for common question types: `yesnoradio`, `date`, `area`
 # - Use plain language in questions
 # - What `no label` does
 # - How to use Markdown syntax to format question text
