@@ -1,0 +1,44 @@
+# This file is for demonstrating the GitHub workflow.
+# 
+# To demonstrate issues, branches, and pull requests (including a simple merge conflict), create two issues:
+# 1. Ask if the user likes dogs
+# 2. Ask if the user likes cats
+# 
+# Create two branches/pull requests, one for each issue. In each, add the relevant variable to the interview order, creating a conflict when you attempt to merge the second pull request.
+
+### Interview order ###
+mandatory: True
+code: |
+  name
+  hello
+---
+question: |
+  What is your name?
+fields:
+  - Name: name
+---
+question: |
+  Do you like dogs?
+fields:
+  - no label: likes_dogs
+    datatype: yesnoradio
+---
+question: |
+  Do you like cats?
+fields:
+  - no label: likes_cats
+    datatype: yesnoradio
+---
+event: hello
+question: |
+  Hi!
+subquestion: |
+  Nice to meet you, ${ name }.
+  
+  % if defined('likes_dogs') and likes_dogs:
+  I like dogs, too!
+  % endif
+  
+  % if defined('likes_cats') and likes_cats:
+  I like cats, too!
+  % endif

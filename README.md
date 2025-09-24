@@ -79,7 +79,7 @@ Outline:
    * Change `signature` to `users[1].signature`
 7. Run the DOCX through the Weaver, then run the interview and note any differences
 8. Discuss the differences between DOCX and PDF templates
-9. Introduce the the [GitHub workflow](https://assemblyline.suffolklitlab.org/docs/authoring/github#workflow)
+9. Introduce the the [GitHub workflow](https://assemblyline.suffolklitlab.org/docs/authoring/github#workflow) using `github_demo.yml`
    1. Publish the interview to GitHub
    2. Create issues based on the unimproved Weaver-generated interview
    3. Walk through the GitHub workflow with one of those issues
