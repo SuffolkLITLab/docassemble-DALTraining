@@ -1,7 +1,24 @@
-# This is just a simple interview to dispel some of the fear of code and get an easy win.
+---
+# Some basic building blocks. Think about what you expect to happen when you press "Run" below
 #
 # Takeaways:
-# - Force a question to display with `mandatory: True`
-# - This is going to be easy!
+# - Keywords: `---`, `question`, `mandatory`
+# - A block that uses `question` can show a page
+# - Force a page to display with `mandatory: True`
+# - A `---` creats a block
+---
 mandatory: True
-question: Hello!
+question: |
+  Hello!
+---
+# Internal notes:
+# - Leave `id` out of this. Keep it as simple as possible
+---
+---
+# Lesson 1a
+# Use ids
+mandatory: True
+id: the only page
+question: |
+  Hello!
+---

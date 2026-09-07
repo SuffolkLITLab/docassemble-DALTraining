@@ -1,26 +1,44 @@
-# This interview introduces fields and variables, displaying a variable in text with Mako syntax, and how a question that depends on a variable will call the question that sets that variable.
+---
+# 2: Variables
+---
+# TODO: Edit the comments below
+---
+# You probably want to get answers from a user and show them later. For that, we use a "variable" to hold the answer that the user gives. If you deal with abstract math a lot, forget everthing you know about variables.
 #
 # Takeaways:
-# - How to create a short text field, which is the default data type in Docassemble
-# - Basic question punctuation/formatting
-# - Variables are used to store the user's input
+# - A text field is the default field type in Docassemble
+# - We use "variables" to store a user's answers
 # - Variables are easier to use if the names make sense!
-# - The LIT Lab has helpful naming conventions
-# - How to use Mako syntax to insert the value of a variable into display text
-# - Using a `#` at the start of a line tells Docassemble to ignore it
-
-# Short text fields
-# 1. Start by typing out the following, but with `variable1` as the variable name
-# 2. Change the variable name to `full_name` because readable variable names are easier to work with! (Mention naming conventions.)
-# 3. Note that clicking **Continue** results in an error, which we can fix by giving the interview an end screen.
-# mandatory: True
-question: What is your name?
-fields:
-  - Full name: full_name
+# - Use Mako syntax to show the value of a variable on the page
 ---
-# Displaying user input
-# 1. Explain that Mako syntax is for inserting code into text
-# 2. Show that we can comment out `mandatory: True` from the question above because this question depends on the answer to that one
+# Displaying user answers
+# 1. Mako is for inserting code into text
+# 2. Only one question uses `mandatory: True`. This page uses the variable `legal_name`. That makes docassemble curious. It searches for where `legal_name` can get a value and triggers the block
 # 3. Note the best practice that there should be only one mandatory question, and it should be at the beginning of the interview
 mandatory: True
-question: Hi, ${ full_name }!
+id: the end
+question: |
+  Hi, ${ legal_name }!
+---
+# Getting a user's answer with a short text field
+# Text field docs: https://docassemble.org/docs/fields.html#plaintext:~:text=datatype%3A%20text
+
+# 1. Start by typing out the following, but with `variable1` as the variable name
+# 2. Change the variable name to `legal_name` because readable variable names are easier to work with! (Mention naming conventions.)
+# 3. Note that clicking **Continue** results in an error, which we can fix by giving the interview an end screen.
+# mandatory: True
+id: name
+question: |
+  What is your full legal name?
+fields:
+  - Your full name on official paperwork: legal_name
+    input type: text
+---
+# Internal notes
+# ids:
+# - people always leave them out, so start early
+# - make it easier to find the block
+# - make it easier to tell if you have a duplicate block (that's a super advanced lession)
+# - help testing work better
+# - help clear cache for refreshing values when you edit an interview and an previous user comes back with an older version of the interview
+---
