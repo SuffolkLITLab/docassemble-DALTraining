@@ -27,18 +27,10 @@ question: |
 # 2. Change the variable name to `legal_name` because readable variable names are easier to work with! (Mention naming conventions.)
 # 3. Note that clicking **Continue** results in an error, which we can fix by giving the interview an end screen.
 # mandatory: True
-id: name
+id: user's legal name
 question: |
   What is your full legal name?
 fields:
   - Your full name on official paperwork: legal_name
     input type: text
----
-# Internal notes
-# ids:
-# - people always leave them out, so start early
-# - make it easier to find the block
-# - make it easier to tell if you have a duplicate block (that's a super advanced lession)
-# - help testing work better
-# - help clear cache for refreshing values when you edit an interview and an previous user comes back with an older version of the interview
 ---

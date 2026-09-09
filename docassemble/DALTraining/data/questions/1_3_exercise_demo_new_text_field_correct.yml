@@ -1,0 +1,34 @@
+# 3 New text field (exercise demo with corrections)
+# Add a new page that asks for the user's preferred name and use that variable on the final page
+
+# Text field docs: https://docassemble.org/docs/fields.html#plaintext:~:text=datatype%3A%20text
+
+# Takeaways:
+# - Syntax error
+---
+mandatory: True
+id: interview order
+code: |
+  preferred_name
+  legal_name
+  end
+---
+event: end
+id: the end
+question: |
+  Hi, ${ preferred_name }! (Legally known as ${ legal_name })
+---
+id: preferred name
+question: |
+  What is your preferred name?
+fields:
+  - Preferred name: preferred_name
+    input type: text
+---
+id: legal name
+question: |
+  What is your full legal name?
+fields:
+  - Your full name on official paperwork: legal_name
+    input type: text
+---

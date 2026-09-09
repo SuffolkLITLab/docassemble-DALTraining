@@ -11,14 +11,18 @@ mandatory: True
 question: |
   Hello!
 ---
-# Internal notes:
-# - Leave `id` out of this. Keep it as simple as possible
----
----
-# Lesson 1a
+# Lesson 1b
 # Use ids
 mandatory: True
 id: the only page
 question: |
   Hello!
+---
+# Internal notes
+# ids:
+# - people always leave them out, so start early
+# - make it easier to find the block
+# - make it easier to tell if you have a duplicate block (that's a super advanced lession)
+# - help testing work better
+# - help clear cache for refreshing values when you edit an interview and an previous user comes back with an older version of the interview
 ---
