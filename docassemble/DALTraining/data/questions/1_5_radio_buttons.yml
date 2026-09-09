@@ -1,0 +1,92 @@
+# 5: Radio buttons
+
+# Takeaways:
+# - A page can have multiple fields
+# - Show the user their statement for clarity
+# - The field was `input type: radio`
+# - Each choice has label to the left of the `:` and the choice's value to the right of the `:`
+
+# TODO: Consider leaving radio buttons and `chioces` list for the next lesson or video 2 and just using yesnoradio as in the original
+# TODO: Consider whether to use the choices 'Yes' and 'No', which won't need an `if` on the final page
+# TODO: Consider changing field types further back - lesson 4 would add `date`. "We'll get to the incident description in a bit." Then incident description in lesson 5. Lesson 6, this lesson, would add `yesnoradio`. They're both datatypes.
+---
+mandatory: True
+id: interview order
+code: |
+  legal_name
+  preferred_name
+  incident_description
+  incident_date
+  # Swearing the user told the truth
+  end
+---
+event: end
+id: the end
+question: |
+  Your statement
+subquestion: |
+  You, ${ preferred_name } (with the legal name of ${ legal_name }) have described an incident.
+
+  **Incident date:** ${ incident_date }
+
+  **Incident description:**
+  
+  ${ incident_description }
+
+  **Did you swear you told the truth though?** Your answer:
+  
+  ${ does_swear }
+---
+# Notice we combined the two pages into one page with multiple fields
+id: name
+question: |
+  Your name
+fields:
+  - Your preferred name: preferred_name
+    input type: text
+  - Your full name on official paperwork: legal_name
+    input type: text
+---
+# Text area docs: https://docassemble.org/docs/fields.html#plaintext:~:text=input%20type%3A%20area,-provides
+id: description
+question: |
+  The incident
+fields:
+  - Describe what happened: incident_description
+    input type: area
+---
+# Date field docs: https://docassemble.org/docs/fields.html#date
+question: When did it happen?
+subquestion: |
+  You described this incident:
+
+  ${ incident_description }
+fields:
+  - Pick the date it happened: incident_date
+    input type: text
+    datatype: date
+---
+# Yes/no questions and true/false (Boolean) variables
+# Radio button docs: https://docassemble.org/docs/fields.html#radio
+# - Start with just the question and discuss plain language. (i.e., "Date of occurance..." v. "You said the incident happened on...")
+id: affidavit
+question: |
+  You must tell the truth
+subquestion: |
+  You said the incident happend on **${ incident_date }**.
+  
+  This was your description of the incident:
+
+  ${ incident_description }
+fields:
+  - Do you swear under penalty of perjury that you have told the truth?: does_swear
+    input type: radio
+    choices:
+      - Yes: Yes
+      - No: No
+---
+# 5 From scratch with number field (exercise)
+# Find the documentation for a number field
+# Create your own form
+# Include a text field and a number field
+---

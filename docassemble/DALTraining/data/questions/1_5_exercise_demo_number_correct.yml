@@ -1,0 +1,37 @@
+# 5: Number field (exercise demo with corrections)
+# Find the documentation for a number field
+# Create your own form
+# Include a text field and a number field
+
+# Takeaways:
+# - Error when missing required values
+# - Missing final page error
+---
+mandatory: True
+id: interview order
+code: |
+  fruit_name
+  how_many_can_eat
+  end
+---
+event: end
+id: the end
+question: |
+  Your fruit your way
+subquestion: |
+  Wow! You chose ${ fruit_name }?! And you could eat ${ how_many_can_eat }?! What an answer. No judgement, though.
+---
+id: which fruit
+question: |
+  Your fruit
+fields:
+  - What is a fruit that you like a whoooooole lot?: fruit_name
+---
+id: how many
+question: |
+  ${ fruit_name }, interesting.
+fields:
+  - How many could you eat in one go?: how_many_can_eat
+    datatype: number
+---
+

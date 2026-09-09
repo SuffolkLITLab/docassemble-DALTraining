@@ -1,0 +1,95 @@
+# 5: Text area (exercise)
+# Add a page that asks for the date of the incident
+# Instead of changing `input type`, you will add a `data type`
+# Date field docs: https://docassemble.org/docs/fields.html#date
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+# mandatory: True
+# id: interview order
+# code: |
+#   legal_name
+#   preferred_name
+#   incident_description
+#   incident_date
+#   end
+# ---
+# event: end
+# id: the end
+# question: |
+#   Your statement
+# subquestion: |
+#   You, ${ preferred_name } (with the legal name of ${ legal_name }) have described an incident.
+
+#   **Incident date:** ${ incident_date }
+
+#   **Incident description:**
+  
+#   ${ incident_description }
+# ---
+# # Notice we combined the two pages into one page with multiple fields
+# id: name
+# question: |
+#   Your name
+# fields:
+#   - Your full name on official paperwork: legal_name
+#     input type: text
+#   - Your preferred name, if you have one: preferred_name
+#     input type: text
+# ---
+# # Text area docs: https://docassemble.org/docs/fields.html#plaintext:~:text=input%20type%3A%20area,-provides
+# id: description
+# question: |
+#   The incident
+# fields:
+#   - Describe what happened: incident_description
+#     input type: area
+# ---
+# # Date fields
+# # Date field docs: https://docassemble.org/docs/fields.html#date
+# question: When did it happen?
+# fields:
+#   - Select the incident date: incident_date
+#     input type: text
+#     datatype: date
+# ---
+# # References:
+# # Text field docs: https://docassemble.org/docs/fields.html#plaintext:~:text=datatype%3A%20text
+# # Text area docs: https://docassemble.org/docs/fields.html#plaintext:~:text=input%20type%3A%20area,-provides
+# # Date field docs: https://docassemble.org/docs/fields.html#date
+# ---
+# # Internal questions:
+# # - Should we switch to removing `input type: text`?

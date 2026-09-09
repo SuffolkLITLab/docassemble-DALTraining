@@ -1,0 +1,27 @@
+[build-system]
+requires = [
+    "setuptools>=80.9.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docassemble.DALTraining"
+version = "1.0.0"
+description = "New interview builder training templates"
+readme = "README.md"
+authors = [
+    { name = "Sam Glover", email = "sam.glover@suffolk.edu" },
+]
+dependencies = []
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
+
+[project.urls]
+Homepage = "https://assemblyline.suffolklitlab.org/"
+
+[tool.setuptools.packages.find]
+where = [
+    ".",
+]

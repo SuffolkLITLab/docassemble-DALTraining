@@ -1,0 +1,26 @@
+# 3: Interview order
+
+# Takeaways:
+# - `event` let's us show a final screen
+# - A variable name is whatever you make it. `legal_name` could just as well be `chair`
+---
+mandatory: True
+id: interview order
+code: |
+  legal_name
+  end
+---
+event: end
+id: the end
+question: |
+  Hi, ${ legal_name }!
+---
+id: user's legal name
+question: |
+  What is your full legal name?
+fields:
+  - Your full name on official paperwork: legal_name
+    input type: text
+---
+# 3 exercise: Add a new page that asks for the user's preferred name and use that variable on the final page
+---
