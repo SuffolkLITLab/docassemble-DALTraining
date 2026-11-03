@@ -20,20 +20,24 @@ code: |
   incident_description
   show_statement
 ---
+id: "what is your name"
 question: What is your name?
 fields:
   - Full name: full_name
 ---
+id: "did you see what happened"
 question: Did you see what happened?
 fields:
   - no label: eyewitness
     datatype: yesnoradio
 ---
+id: "about the event"
 question: About the event
 fields:
   - Describe what happened: incident_description
     input type: area
 ---
+id: "when did it happen"
 question: When did it happen?
 fields:
   - Select the event date: incident_date
@@ -42,6 +46,7 @@ fields:
 # 1. Move this question block back to the end of the interview
 # 2. Add the `event: show_statement` modifier, which gives us a way to add this question to the interview order code block
 event: show_statement
+id: "statement of full name incident date incident date eyewitness eyewitness incident description"
 question: |
   ## Statement of ${ full_name }
   

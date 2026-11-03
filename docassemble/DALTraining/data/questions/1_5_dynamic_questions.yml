@@ -12,10 +12,12 @@ code: |
   incident_description
   show_statement
 ---
+id: "what is your name"
 question: What is your name?
 fields:
   - Full name: full_name
 ---
+id: "did you see what happened"
 question: Did you see what happened?
 fields:
   - no label: eyewitness
@@ -25,6 +27,7 @@ fields:
 # 2. The `%` is a Mako tag, so you don't also need to use `${}` around variables
 # 3. Saying `if eyewitness` is equivalent to `if eyewitness == True`, but sometimes it's helpful to be explicit
 # 4. There is more than one way to do this, but this is probably the simplest
+id: "if eyewitness true describe what you saw else describe what you heard endif"
 question: |
   % if eyewitness == True:
   Describe what you saw
@@ -35,12 +38,14 @@ fields:
   - no label: incident_description
     input type: area
 ---
+id: "when did it happen"
 question: When did it happen?
 fields:
   - Select the event date: incident_date
     datatype: date
 ---
 event: show_statement
+id: "statement of full name incident date incident date eyewitness eyewitness incident description"
 question: |
   ## Statement of ${ full_name }
   

@@ -16,6 +16,7 @@
 # 5. Add the remaining fields
 # 6. Note that the interview order depends on the order of variables in this question, not the order of the question blocks
 mandatory: True
+id: "statement of full name incident date incident date eyewitness eyewitness incident description"
 question: |
   ## Statement of ${ full_name }
   
@@ -25,6 +26,7 @@ question: |
   ${ incident_description }
 ---
 # This question is taken from the previous interview.
+id: "what is your name"
 question: What is your name?
 fields:
   - Full name: full_name
@@ -33,18 +35,21 @@ fields:
 # 1. Start with just the question and discuss plain language. (i.e., "Were you present at the incident" v. "Did you see what happened?")
 # 2. Show how to use `no label` when the question is enough
 # 3. Add `datatype: yesnoradio` and explain true/false (Boolean) variables. Discuss/mention the usefulness of Boolean variables for checkboxes.
+id: "did you see what happened"
 question: Did you see what happened?
 fields:
   - no label: eyewitness
     datatype: yesnoradio
 ---
 # Long text fields
+id: "about the event"
 question: About the event
 fields:
   - Describe what happened: incident_description
     input type: area
 ---
 # Date fields
+id: "when did it happen"
 question: When did it happen?
 fields:
   - Select the event date: incident_date
