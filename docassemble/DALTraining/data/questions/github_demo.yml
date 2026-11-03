@@ -12,17 +12,20 @@ code: |
   name
   hello
 ---
+id: "what is your name"
 question: |
   What is your name?
 fields:
   - Name: name
 ---
+id: "do you like dogs"
 question: |
   Do you like dogs?
 fields:
   - no label: likes_dogs
     datatype: yesnoradio
 ---
+id: "do you like cats"
 question: |
   Do you like cats?
 fields:
@@ -30,6 +33,7 @@ fields:
     datatype: yesnoradio
 ---
 event: hello
+id: "hi"
 question: |
   Hi!
 subquestion: |

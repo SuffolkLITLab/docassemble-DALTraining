@@ -13,15 +13,18 @@ code: |
   signature_date
   assemble_affidavit
 ---
+id: "what is your name"
 question: What is your name?
 fields:
   - Full name: full_name
 ---
+id: "affidavit of full name"
 question: Affidavit of ${ full_name }
 fields:
   - Under penalty of perjury I, ${ full_name }, do swear and affirm the following to be true: affidavit_body
     input type: area
 ---
+id: "sign your affidavit"
 question: |
   Sign your affidavit
 subquestion: |
@@ -33,6 +36,7 @@ under: |
 code: |
   signature_date = today()
 ---
+id: "your affidavit is ready"
 question: Your affidavit is ready
 attachment:
   - name: Affidavit of ${ full_name }
