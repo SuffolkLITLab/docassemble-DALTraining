@@ -10,8 +10,6 @@
 mandatory: True
 code: |
   name
-  likes_dogs
-  likes_cats
   hello
 ---
 id: "what is your name"
